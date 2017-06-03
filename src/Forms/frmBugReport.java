@@ -146,15 +146,15 @@ public class frmBugReport extends javax.swing.JDialog
   }
   
   private void jButton1ActionPerformed(java.awt.event.ActionEvent evt)
-  {
+  {/*
     if (textBug.getText().length() != 0)
     {
       if (!tbEmail.getText().equals(""))
       {
         jButton1.setText("Enviando...");
         jPanel1.repaint();
-        String username = "justplaymp3bugreport@gmail.com";
-        String password = "120588@nasc";
+        String username = "";
+        String password = "";
         
         java.util.Properties props = new java.util.Properties();
         props.put("mail.smtp.auth", "true");
@@ -200,7 +200,7 @@ public class frmBugReport extends javax.swing.JDialog
         tbEmail.setBorder(new javax.swing.border.LineBorder(java.awt.Color.red));
       }
     } else { textBug.setBorder(new javax.swing.border.LineBorder(java.awt.Color.red));
-    }
+    }*/
   }
   
 
