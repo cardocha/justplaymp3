@@ -28,9 +28,9 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.table.TableColumn;
 import javazoom.jl.player.Player;
 
-public class Principal extends javax.swing.JFrame
+public class frmMain extends javax.swing.JFrame
 {
-  public Principal()
+  public frmMain()
   {
     initComponents();
     setLocationRelativeTo(null);
@@ -56,7 +56,7 @@ public class Principal extends javax.swing.JFrame
       btExcluiListaAtual.setEnabled(false);
       btMistura.setEnabled(false);
     }
-    setIconImage(new ImageIcon(getClass().getResource("/Icones/AppIcon.png")).getImage());
+    setIconImage(new ImageIcon(getClass().getResource("/Icons/AppIcon.png")).getImage());
   }
   
 
@@ -111,31 +111,31 @@ public class Principal extends javax.swing.JFrame
     jPanel1.setLayout(new java.awt.GridLayout(1, 0));
     
     btAddmusica.setFont(new Font("Agency FB", 1, 14));
-    btAddmusica.setIcon(new ImageIcon(getClass().getResource("/Icones/AddMusica.png")));
+    btAddmusica.setIcon(new ImageIcon(getClass().getResource("/Icons/AddMusica.png")));
     btAddmusica.setText("Adcionar");
     btAddmusica.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent evt) {
-        Principal.this.btAddmusicaActionPerformed(evt);
+        frmMain.this.btAddmusicaActionPerformed(evt);
       }
     });
     jPanel1.add(btAddmusica);
     
     btRemoveMusica.setFont(new Font("Agency FB", 1, 14));
-    btRemoveMusica.setIcon(new ImageIcon(getClass().getResource("/Icones/removeMusica.png")));
+    btRemoveMusica.setIcon(new ImageIcon(getClass().getResource("/Icons/removeMusica.png")));
     btRemoveMusica.setText("Remover");
     btRemoveMusica.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent evt) {
-        Principal.this.btRemoveMusicaActionPerformed(evt);
+        frmMain.this.btRemoveMusicaActionPerformed(evt);
       }
     });
     jPanel1.add(btRemoveMusica);
     
     btMistura.setFont(new Font("Agency FB", 1, 14));
-    btMistura.setIcon(new ImageIcon(getClass().getResource("/Icones/misturar.png")));
+    btMistura.setIcon(new ImageIcon(getClass().getResource("/Icons/misturar.png")));
     btMistura.setText("Misturar");
     btMistura.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent evt) {
-        Principal.this.btMisturaActionPerformed(evt);
+        frmMain.this.btMisturaActionPerformed(evt);
       }
     });
     jPanel1.add(btMistura);
@@ -144,20 +144,20 @@ public class Principal extends javax.swing.JFrame
     jPanel2.setToolTipText("Tocando agora");
     
     btplay.setFont(new Font("Agency FB", 1, 14));
-    btplay.setIcon(new ImageIcon(getClass().getResource("/Icones/play.png")));
+    btplay.setIcon(new ImageIcon(getClass().getResource("/Icons/play.png")));
     btplay.setText("Play");
     btplay.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent evt) {
-        Principal.this.btplayActionPerformed(evt);
+        frmMain.this.btplayActionPerformed(evt);
       }
       
     });
     btstop.setFont(new Font("Agency FB", 1, 14));
-    btstop.setIcon(new ImageIcon(getClass().getResource("/Icones/stop.png")));
+    btstop.setIcon(new ImageIcon(getClass().getResource("/Icons/stop.png")));
     btstop.setText("Stop");
     btstop.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent evt) {
-        Principal.this.btstopActionPerformed(evt);
+        frmMain.this.btstopActionPerformed(evt);
       }
       
     });
@@ -174,7 +174,7 @@ public class Principal extends javax.swing.JFrame
     
     lbtempoDecorrido.setText("00:00:00");
     
-    lbAnime.setIcon(new ImageIcon(getClass().getResource("/Icones/sp1.png")));
+    lbAnime.setIcon(new ImageIcon(getClass().getResource("/Icons/sp1.png")));
     
     lbtituloAutor.setFont(new Font("Agency FB", 1, 14));
     lbtituloAutor.setText("Autor:");
@@ -228,19 +228,19 @@ public class Principal extends javax.swing.JFrame
 
     pnPrograma.setBorder(BorderFactory.createTitledBorder(null, "Sobre", 0, 0, new Font("Agency FB", 1, 14)));
     
-    jButton2.setIcon(new ImageIcon(getClass().getResource("/Icones/Sobre.png")));
+    jButton2.setIcon(new ImageIcon(getClass().getResource("/Icons/Sobre.png")));
     jButton2.setToolTipText("Sobre o programa");
     jButton2.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent evt) {
-        Principal.this.jButton2ActionPerformed(evt);
+        frmMain.this.jButton2ActionPerformed(evt);
       }
       
     });
-    jButton3.setIcon(new ImageIcon(getClass().getResource("/Icones/bug.png")));
+    jButton3.setIcon(new ImageIcon(getClass().getResource("/Icons/bug.png")));
     jButton3.setToolTipText("Informe um bug");
     jButton3.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent evt) {
-        Principal.this.jButton3ActionPerformed(evt);
+        frmMain.this.jButton3ActionPerformed(evt);
       }
       
     });
@@ -259,17 +259,17 @@ public class Principal extends javax.swing.JFrame
 
 
 
-    btAnteriorMusica.setIcon(new ImageIcon(getClass().getResource("/Icones/anterior.png")));
+    btAnteriorMusica.setIcon(new ImageIcon(getClass().getResource("/Icons/anterior.png")));
     btAnteriorMusica.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent evt) {
-        Principal.this.btAnteriorMusicaActionPerformed(evt);
+        frmMain.this.btAnteriorMusicaActionPerformed(evt);
       }
       
     });
-    btProximaMusica.setIcon(new ImageIcon(getClass().getResource("/Icones/proxima.png")));
+    btProximaMusica.setIcon(new ImageIcon(getClass().getResource("/Icons/proxima.png")));
     btProximaMusica.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent evt) {
-        Principal.this.btProximaMusicaActionPerformed(evt);
+        frmMain.this.btProximaMusicaActionPerformed(evt);
       }
       
     });
@@ -330,10 +330,10 @@ public class Principal extends javax.swing.JFrame
     tbPlayListAtual.setSelectionMode(0);
     tbPlayListAtual.addMouseListener(new java.awt.event.MouseAdapter() {
       public void mouseClicked(MouseEvent evt) {
-        Principal.this.tbPlayListAtualMouseClicked(evt);
+        frmMain.this.tbPlayListAtualMouseClicked(evt);
       }
       
-      public void mouseEntered(MouseEvent evt) { Principal.this.tbPlayListAtualMouseEntered(evt);
+      public void mouseEntered(MouseEvent evt) { frmMain.this.tbPlayListAtualMouseEntered(evt);
       }
     });
     jScrollPane1.setViewportView(tbPlayListAtual);
@@ -342,31 +342,31 @@ public class Principal extends javax.swing.JFrame
     jPanel3.setLayout(new java.awt.GridLayout(1, 0));
     
     btSalvaListaAtual.setFont(new Font("Agency FB", 1, 14));
-    btSalvaListaAtual.setIcon(new ImageIcon(getClass().getResource("/Icones/addLista.png")));
+    btSalvaListaAtual.setIcon(new ImageIcon(getClass().getResource("/Icons/addLista.png")));
     btSalvaListaAtual.setText("Salvar lista");
     btSalvaListaAtual.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent evt) {
-        Principal.this.btSalvaListaAtualActionPerformed(evt);
+        frmMain.this.btSalvaListaAtualActionPerformed(evt);
       }
     });
     jPanel3.add(btSalvaListaAtual);
     
     btImportaListaAtual.setFont(new Font("Agency FB", 1, 14));
-    btImportaListaAtual.setIcon(new ImageIcon(getClass().getResource("/Icones/importarLista.png")));
+    btImportaListaAtual.setIcon(new ImageIcon(getClass().getResource("/Icons/importarLista.png")));
     btImportaListaAtual.setText("Importar lista");
     btImportaListaAtual.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent evt) {
-        Principal.this.btImportaListaAtualActionPerformed(evt);
+        frmMain.this.btImportaListaAtualActionPerformed(evt);
       }
     });
     jPanel3.add(btImportaListaAtual);
     
     btExcluiListaAtual.setFont(new Font("Agency FB", 1, 14));
-    btExcluiListaAtual.setIcon(new ImageIcon(getClass().getResource("/Icones/LimparLista.png")));
+    btExcluiListaAtual.setIcon(new ImageIcon(getClass().getResource("/Icons/LimparLista.png")));
     btExcluiListaAtual.setText("Limpar lista");
     btExcluiListaAtual.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent evt) {
-        Principal.this.btExcluiListaAtualActionPerformed(evt);
+        frmMain.this.btExcluiListaAtualActionPerformed(evt);
       }
     });
     jPanel3.add(btExcluiListaAtual);
@@ -589,7 +589,7 @@ public class Principal extends javax.swing.JFrame
       if (lbTituloTocando.getText().equals("Tocando:"))
       {
 
-        if (javax.swing.JOptionPane.showConfirmDialog(null, "A lista esta em execução\nDeseja interrompe- la?", "Confirmação", 0, 2, new ImageIcon(getClass().getResource("/Icones/dadoerro.png"))) == 0)
+        if (javax.swing.JOptionPane.showConfirmDialog(null, "A lista esta em execução\nDeseja interrompe- la?", "Confirmação", 0, 2, new ImageIcon(getClass().getResource("/Icons/dadoerro.png"))) == 0)
         {
 
 
@@ -634,7 +634,7 @@ public class Principal extends javax.swing.JFrame
       if (lbTituloTocando.getText().equals("Tocando:"))
       {
 
-        if (javax.swing.JOptionPane.showConfirmDialog(null, "A lista esta em execução\nDeseja interrompe- la?", "Confirmação", 0, 2, new ImageIcon(getClass().getResource("/Icones/dadoerro.png"))) == 0)
+        if (javax.swing.JOptionPane.showConfirmDialog(null, "A lista esta em execução\nDeseja interrompe- la?", "Confirmação", 0, 2, new ImageIcon(getClass().getResource("/Icons/dadoerro.png"))) == 0)
         {
 
 
@@ -762,7 +762,7 @@ public class Principal extends javax.swing.JFrame
               if (volta.booleanValue()) {
                 volta = Boolean.valueOf(false);
               } else {
-                localInteger1 = line;Integer localInteger2 = Principal.this.line = Integer.valueOf(line.intValue() + 1);
+                localInteger1 = line;Integer localInteger2 = frmMain.this.line = Integer.valueOf(line.intValue() + 1);
               }
               if (line.intValue() == modeloMusicas.getRowCount())
               {
@@ -818,7 +818,7 @@ public class Principal extends javax.swing.JFrame
  
     java.awt.EventQueue.invokeLater(new Runnable() {
       public void run() {
-        new Principal().setVisible(true);
+        new frmMain().setVisible(true);
       }
     });
   }

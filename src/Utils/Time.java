@@ -71,7 +71,7 @@ public class Time
       lbtempo.setText(dt.format(data));
       
 
-      img.setIcon(new ImageIcon(getClass().getResource("/Icones/sp" + index + ".png")));
+      img.setIcon(new ImageIcon(getClass().getResource("/Icons/sp" + index + ".png")));
       Integer localInteger1 = index;Integer localInteger2 = index = Integer.valueOf(index.intValue() + 1);
       if (index.intValue() > 5) {
         index = Integer.valueOf(2);
@@ -84,6 +84,6 @@ public class Time
     System.out.println(stopFlag);
     slider.setValue(0);
     lbtempo.setText("00:00:00");
-    img.setIcon(new ImageIcon(getClass().getResource("/Icones/sp1.png")));
+    img.setIcon(new ImageIcon(getClass().getResource("/Icons/sp1.png")));
   }
 }

@@ -1,6 +1,6 @@
 package Main;
 
-import Forms.Principal;
+import Forms.frmMain;
 import java.io.IOException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
@@ -13,6 +13,6 @@ public class main
   public static void main(String[] args)
     throws UnsupportedAudioFileException, IOException
   {
-    new Principal().setVisible(true);
+    new frmMain().setVisible(true);
   }
 }
