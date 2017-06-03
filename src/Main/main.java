@@ -1,6 +1,6 @@
 package Main;
 
-import Telas.Principal;
+import Forms.Principal;
 import java.io.IOException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 

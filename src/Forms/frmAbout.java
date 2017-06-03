@@ -1,8 +1,8 @@
-package Telas;
+package Forms;
 
 import javax.swing.GroupLayout.SequentialGroup;
 
-public class frmSobre extends javax.swing.JDialog {
+public class frmAbout extends javax.swing.JDialog {
   private javax.swing.JButton btOk;
   private javax.swing.JLabel jLabel1;
   private javax.swing.JLabel jLabel2;
@@ -13,7 +13,7 @@ public class frmSobre extends javax.swing.JDialog {
   private javax.swing.JLabel jLabel9;
   private javax.swing.JPanel jPanel1;
   
-  public frmSobre(java.awt.Frame parent, boolean modal) {
+  public frmAbout(java.awt.Frame parent, boolean modal) {
     super(parent, modal);
     initComponents();
     setLocationRelativeTo(null);
@@ -108,7 +108,7 @@ public class frmSobre extends javax.swing.JDialog {
     btOk.setText("Ok");
     btOk.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        frmSobre.this.btOkActionPerformed(evt);
+        frmAbout.this.btOkActionPerformed(evt);
       }
       
     });
@@ -156,7 +156,7 @@ public class frmSobre extends javax.swing.JDialog {
 
     java.awt.EventQueue.invokeLater(new Runnable() {
       public void run() {
-        frmSobre dialog = new frmSobre(new javax.swing.JFrame(), true);
+        frmAbout dialog = new frmAbout(new javax.swing.JFrame(), true);
         dialog.addWindowListener(new java.awt.event.WindowAdapter()
         {
           public void windowClosing(java.awt.event.WindowEvent e) {

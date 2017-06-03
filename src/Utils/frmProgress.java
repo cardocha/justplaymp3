@@ -1,6 +1,6 @@
 package Utils;
 
-import Entidades.Musica;
+import Entities.Music;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Map;
@@ -14,18 +14,18 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 
-public class frmProgresso extends javax.swing.JDialog
+public class frmProgress extends javax.swing.JDialog
 {
   Integer capacidadeBarraProgresso;
   File[] musicas;
-  ArrayList<Musica> modeloMusicas;
+  ArrayList<Music> modeloMusicas;
   private JProgressBar barraprogresso;
   private JLabel jLabel1;
   private JLabel jLabel2;
   private JPanel jPanel1;
   private JLabel lbAcao;
   
-  public frmProgresso(java.awt.Frame parent, boolean modal)
+  public frmProgress(java.awt.Frame parent, boolean modal)
   {
     super(parent, modal);
     initComponents();
@@ -43,11 +43,11 @@ public class frmProgresso extends javax.swing.JDialog
     this.musicas = musicas;
   }
   
-  public ArrayList<Musica> getModeloMusicas() {
+  public ArrayList<Music> getModeloMusicas() {
     return modeloMusicas;
   }
   
-  public void setModeloMusicas(ArrayList<Musica> modeloMusicas) {
+  public void setModeloMusicas(ArrayList<Music> modeloMusicas) {
     this.modeloMusicas = modeloMusicas;
   }
   
@@ -67,7 +67,7 @@ public class frmProgresso extends javax.swing.JDialog
 
         if ((baseFileFormat instanceof org.tritonus.share.sampled.file.TAudioFileFormat))
         {
-          Musica musica = new Musica();
+          Music musica = new Music();
           
           Map properties = ((org.tritonus.share.sampled.file.TAudioFileFormat)baseFileFormat).properties();
           String key = "title";
@@ -214,7 +214,7 @@ public class frmProgresso extends javax.swing.JDialog
   {
     java.awt.EventQueue.invokeLater(new Runnable() {
       public void run() {
-        frmProgresso dialog = new frmProgresso(new javax.swing.JFrame(), true);
+        frmProgress dialog = new frmProgress(new javax.swing.JFrame(), true);
         dialog.addWindowListener(new java.awt.event.WindowAdapter()
         {
           public void windowClosing(java.awt.event.WindowEvent e) {

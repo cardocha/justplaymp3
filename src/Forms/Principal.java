@@ -1,8 +1,8 @@
-package Telas;
+package Forms;
 
-import Entidades.Musica;
-import ModeloTabelas.ModeloMusicas;
-import Utils.Tempo;
+import Entities.Music;
+import TableModel.MusicModel;
+import Utils.Time;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -438,7 +438,7 @@ public class Principal extends javax.swing.JFrame
 
           if ((baseFileFormat instanceof org.tritonus.share.sampled.file.TAudioFileFormat))
           {
-            Musica musica = new Musica();
+            Music musica = new Music();
             
             Map properties = ((org.tritonus.share.sampled.file.TAudioFileFormat)baseFileFormat).properties();
             String key = "title";
@@ -573,7 +573,7 @@ public class Principal extends javax.swing.JFrame
   
   private void btSalvaListaAtualActionPerformed(ActionEvent evt)
   {
-    Musica musica = new Musica();
+    Music musica = new Music();
     if (jcSalvaLista.showOpenDialog(jPanel1) == 0)
     {
       musica.serializaListaMusicas(modeloMusicas.getAsArrayList(), jcSalvaLista.getSelectedFile().getAbsolutePath() + ".dat");
@@ -626,11 +626,11 @@ public class Principal extends javax.swing.JFrame
 
   private void btImportaListaAtualActionPerformed(ActionEvent evt)
   {
-    Musica musica = new Musica();
+    Music musica = new Music();
     
     if (jcImportaLista.showOpenDialog(jPanel1) == 0)
     {
-      java.util.ArrayList<Musica> musicas = musica.deserializaListaMusicas(jcImportaLista.getSelectedFile().getAbsolutePath());
+      java.util.ArrayList<Music> musicas = musica.deserializaListaMusicas(jcImportaLista.getSelectedFile().getAbsolutePath());
       if (lbTituloTocando.getText().equals("Tocando:"))
       {
 
@@ -642,7 +642,7 @@ public class Principal extends javax.swing.JFrame
           stop = Boolean.valueOf(true);
           player.close();
           
-          modeloMusicas = new ModeloMusicas(musicas);
+          modeloMusicas = new MusicModel(musicas);
           tbPlayListAtual.setModel(modeloMusicas);
           lbTituloTocando.setText("Selecionado:");
           lbTocandoAgora.setText("Nenhum");
@@ -657,7 +657,7 @@ public class Principal extends javax.swing.JFrame
       }
       else
       {
-        modeloMusicas = new ModeloMusicas(musicas);
+        modeloMusicas = new MusicModel(musicas);
         tbPlayListAtual.setModel(modeloMusicas);
         lbTituloTocando.setText("Selecionado:");
         lbTocandoAgora.setText("Nenhum");
@@ -702,11 +702,11 @@ public class Principal extends javax.swing.JFrame
   }
   
   private void jButton3ActionPerformed(ActionEvent evt) {
-    new frmInformeBug(this, rootPaneCheckingEnabled).setVisible(true);
+    new frmBugReport(this, rootPaneCheckingEnabled).setVisible(true);
   }
   
   private void jButton2ActionPerformed(ActionEvent evt) {
-    new frmSobre(this, rootPaneCheckingEnabled).setVisible(true);
+    new frmAbout(this, rootPaneCheckingEnabled).setVisible(true);
   }
   
   private void btstopActionPerformed(ActionEvent evt) {
@@ -747,7 +747,7 @@ public class Principal extends javax.swing.JFrame
               player = new Player(new java.io.FileInputStream(new File(modeloMusicas.getMusica(line.intValue()).getPath())));
               
               lbtempoDecorrido.setText(String.valueOf(player.getPosition()));
-              tempo = new Tempo(lbtempoDecorrido, player, modeloMusicas.getMusica(line.intValue()).getTempo(), slider1, lbAnime);
+              tempo = new Time(lbtempoDecorrido, player, modeloMusicas.getMusica(line.intValue()).getTempo(), slider1, lbAnime);
               
               tempo.start();
               tbPlayListAtual.setRowSelectionInterval(line.intValue(), line.intValue());
@@ -795,14 +795,14 @@ public class Principal extends javax.swing.JFrame
     }
   }
   
-  ModeloMusicas modeloMusicas = new ModeloMusicas();
+  MusicModel modeloMusicas = new MusicModel();
   JFileChooser fc = new JFileChooser();
   JFileChooser jcSalvaLista = new JFileChooser();
   JFileChooser jcImportaLista = new JFileChooser();
   Player player;
   Boolean volta = Boolean.valueOf(false);
   Boolean stop = Boolean.valueOf(false);
-  Tempo tempo = new Tempo();
+  Time tempo = new Time();
   
   Integer line;
   

@@ -1,4 +1,4 @@
-package Entidades;
+package Entities;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -9,7 +9,7 @@ import java.io.PrintStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Musica
+public class Music
   implements Serializable
 {
   String Nome;
@@ -30,7 +30,7 @@ public class Musica
     this.path = path;
   }
   
-  public Musica(String Nome, String Autor, String Album, String data, Long tempo, String direitos, String comentario, String path) {
+  public Music(String Nome, String Autor, String Album, String data, Long tempo, String direitos, String comentario, String path) {
     this.Nome = Nome;
     this.Autor = Autor;
     this.Album = Album;
@@ -40,7 +40,7 @@ public class Musica
     this.comentario = comentario;
   }
   
-  public Musica() {}
+  public Music() {}
   
   public String getNome()
   {
@@ -106,7 +106,7 @@ public class Musica
   
 
 
-  public void serializaListaMusicas(ArrayList<Musica> listaMusicas, String arquivo)
+  public void serializaListaMusicas(ArrayList<Music> listaMusicas, String arquivo)
   {
     FileOutputStream arq = null;
     ObjectOutputStream out = null;
@@ -131,7 +131,7 @@ public class Musica
     }
   }
   
-  public ArrayList<Musica> deserializaListaMusicas(String arquivo)
+  public ArrayList<Music> deserializaListaMusicas(String arquivo)
   {
     FileInputStream arqLeitura = null;
     ObjectInputStream in = null;

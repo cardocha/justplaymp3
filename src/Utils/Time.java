@@ -11,7 +11,7 @@ import javazoom.jl.player.Player;
 
 
 
-public class Tempo
+public class Time
   extends Thread
 {
   JLabel lbtempo;
@@ -30,16 +30,16 @@ public class Tempo
     this.stopFlag = stopFlag;
   }
   
-  public Tempo(Boolean stopFlag) {
+  public Time(Boolean stopFlag) {
     this.stopFlag = stopFlag;
   }
   
-  public Tempo()
+  public Time()
   {
     stopFlag = Boolean.valueOf(true);
   }
   
-  public Tempo(JLabel tempo, Player player, Long duration, JSlider slider, JLabel img)
+  public Time(JLabel tempo, Player player, Long duration, JSlider slider, JLabel img)
   {
     lbtempo = tempo;
     this.player = player;

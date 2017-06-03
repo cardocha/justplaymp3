@@ -1,4 +1,4 @@
-package Telas;
+package Forms;
 
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.ParallelGroup;
@@ -6,7 +6,7 @@ import javax.swing.GroupLayout.SequentialGroup;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 
-public class frmInformeBug extends javax.swing.JDialog
+public class frmBugReport extends javax.swing.JDialog
 {
   private JButton jButton1;
   private JButton jButton2;
@@ -18,7 +18,7 @@ public class frmInformeBug extends javax.swing.JDialog
   private javax.swing.JTextField tbEmail;
   private javax.swing.JTextArea textBug;
   
-  public frmInformeBug(java.awt.Frame parent, boolean modal)
+  public frmBugReport(java.awt.Frame parent, boolean modal)
   {
     super(parent, modal);
     initComponents();
@@ -58,14 +58,14 @@ public class frmInformeBug extends javax.swing.JDialog
     jButton1.setText("Enviar");
     jButton1.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        frmInformeBug.this.jButton1ActionPerformed(evt);
+        frmBugReport.this.jButton1ActionPerformed(evt);
       }
       
     });
     jButton2.setText("Cancela");
     jButton2.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        frmInformeBug.this.jButton2ActionPerformed(evt);
+        frmBugReport.this.jButton2ActionPerformed(evt);
       }
       
     });
@@ -212,7 +212,7 @@ public class frmInformeBug extends javax.swing.JDialog
   {
     java.awt.EventQueue.invokeLater(new Runnable() {
       public void run() {
-        frmInformeBug dialog = new frmInformeBug(new javax.swing.JFrame(), true);
+        frmBugReport dialog = new frmBugReport(new javax.swing.JFrame(), true);
         dialog.addWindowListener(new java.awt.event.WindowAdapter()
         {
           public void windowClosing(java.awt.event.WindowEvent e) {

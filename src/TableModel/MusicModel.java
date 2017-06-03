@@ -1,6 +1,6 @@
-package ModeloTabelas;
+package TableModel;
 
-import Entidades.Musica;
+import Entities.Music;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -8,22 +8,22 @@ import javax.swing.table.AbstractTableModel;
 
 
 
-public class ModeloMusicas
+public class MusicModel
   extends AbstractTableModel
 {
   private final String[] colunas = { "Nome", "Autor", "Album" };
   
 
-  private ArrayList<Musica> linhas;
+  private ArrayList<Music> linhas;
   
 
 
-  public ModeloMusicas()
+  public MusicModel()
   {
     linhas = new ArrayList();
   }
   
-  public ModeloMusicas(ArrayList<Musica> linhas) {
+  public MusicModel(ArrayList<Music> linhas) {
     this.linhas = linhas;
   }
   
@@ -40,7 +40,7 @@ public class ModeloMusicas
   
   public Object getValueAt(int rowIndex, int columnIndex)
   {
-    Musica m = (Musica)linhas.get(rowIndex);
+    Music m = (Music)linhas.get(rowIndex);
     switch (columnIndex) {
     case 0: 
       return m.getNome();
@@ -57,7 +57,7 @@ public class ModeloMusicas
 
   public void setValueAt(Object objetct, int rowIndex, int columnIndex)
   {
-    Musica m = (Musica)linhas.get(rowIndex);
+    Music m = (Music)linhas.get(rowIndex);
     String value = (String)objetct;
     switch (columnIndex) {
     case 0: 
@@ -107,7 +107,7 @@ public class ModeloMusicas
     fireTableDataChanged();
   }
   
-  public void addListaDeMusicas(List<Musica> musicas)
+  public void addListaDeMusicas(List<Music> musicas)
   {
     int indice = getRowCount();
     
@@ -118,12 +118,12 @@ public class ModeloMusicas
     fireTableRowsInserted(indice, indice + musicas.size());
   }
   
-  public Musica getMusica(int rowIndex)
+  public Music getMusica(int rowIndex)
   {
-    return (Musica)linhas.get(rowIndex);
+    return (Music)linhas.get(rowIndex);
   }
   
-  public void addMusica(Musica musica)
+  public void addMusica(Music musica)
   {
     linhas.add(musica);
     
@@ -145,7 +145,7 @@ public class ModeloMusicas
     fireTableRowsDeleted(indiceLinha, indiceLinha);
   }
   
-  public ArrayList<Musica> getAsArrayList() {
+  public ArrayList<Music> getAsArrayList() {
     return linhas;
   }
   
