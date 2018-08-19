@@ -53,7 +53,7 @@ public class frmAbout extends javax.swing.JDialog {
     
     jLabel6.setText("1.0");
     
-    jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icones/AppIcon.png")));
+    jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/AppIcon.png")));
     
     jLabel9.setFont(new java.awt.Font("Agency FB", 1, 18));
     jLabel9.setText("Just Play Mp3!");

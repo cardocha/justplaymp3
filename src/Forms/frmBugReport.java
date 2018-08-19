@@ -145,62 +145,10 @@ public class frmBugReport extends javax.swing.JDialog
     dispose();
   }
   
+  
   private void jButton1ActionPerformed(java.awt.event.ActionEvent evt)
-  {/*
-    if (textBug.getText().length() != 0)
-    {
-      if (!tbEmail.getText().equals(""))
-      {
-        jButton1.setText("Enviando...");
-        jPanel1.repaint();
-        String username = "";
-        String password = "";
-        
-        java.util.Properties props = new java.util.Properties();
-        props.put("mail.smtp.auth", "true");
-        props.put("mail.smtp.starttls.enable", "true");
-        props.put("mail.smtp.host", "smtp.gmail.com");
-        props.put("mail.smtp.port", "587");
-        
-        javax.mail.Session session = javax.mail.Session.getInstance(props, new javax.mail.Authenticator()
-        {
-          protected javax.mail.PasswordAuthentication getPasswordAuthentication() {
-            return new javax.mail.PasswordAuthentication("justplaymp3bugreport@gmail.com", "120588@nasc");
-          }
-        });
-        
-        try
-        {
-          javax.mail.Message message = new javax.mail.internet.MimeMessage(session);
-          message.setFrom(new javax.mail.internet.InternetAddress("justplaymp3bugreport@gmail.com"));
-          message.setRecipients(javax.mail.Message.RecipientType.TO, javax.mail.internet.InternetAddress.parse("justplaymp3bugreport@gmail.com"));
-          
-          message.setSubject("Bug encontrado JustPlayMP3");
-          message.setText("Bug enontrado.\n\n por " + tbEmail.getText() + "\n\nDescrição do Bug:\n" + textBug.getText());
-          
-
-          javax.mail.Transport.send(message);
-          
-          System.out.println("Done");
-          jLabel3.setText("<html>Mensagem enviada.<br/> Obrigado por sua contribuição</html>");
-          jLabel3.setForeground(java.awt.Color.green);
-          jLabel3.setVisible(true);
-          jButton2.setText("Fechar");
-          jButton1.setText("Enviado");
-        }
-        catch (javax.mail.MessagingException e) {
-          jLabel3.setText("<html>Mensagem não enviada.<br/> Por favor envieum e-mail ao desenvolvedor lupearljam@gmail\n sua opnião é muito importante!</html>");
-          jLabel3.setForeground(java.awt.Color.red);
-          jLabel3.setVisible(true);
-          throw new RuntimeException(e);
-        }
-        
-        jButton1.setEnabled(false);
-      } else {
-        tbEmail.setBorder(new javax.swing.border.LineBorder(java.awt.Color.red));
-      }
-    } else { textBug.setBorder(new javax.swing.border.LineBorder(java.awt.Color.red));
-    }*/
+  {
+      // Will be removed in the future
   }
   
 
